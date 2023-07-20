@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table style="height:800px; width:1342px;" border="0">
+            <tr><td colspan="2" style="height:80px; font-family:Verdana, Geneva, Tahoma, sans-serif; color:#FFFFFF; font-weight: 800; background-color: #013220;">
+               
+                <asp:Label ID="LabelLogo" runat="server" Font-Bold="True" Font-Names="Broadway" Font-Size="30px" ForeColor="White" Text="GreatFee" style="height:100px; margin-left:0px"></asp:Label>
+                <asp:Image ID="ImageLogo" runat="server" Height="40px" ImageUrl="../l2.png" Width="30px" />
+                
+                <asp:ImageButton ID="btnLogin" runat="server" style="float:right" OnClick="btnLogin_Click" Height="40px" Width="40px" ImageUrl="~/signout.png"></asp:ImageButton><br />
+                </td></tr>
+            <tr><td style="width:25%; background-color:#AFE1AF;">
+                <asp:menu ID="menuMain" runat="server" style="font-weight:900" BackColor="#013220" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="17px" ForeColor="#003300" StaticSubMenuIndent="10px" Height="700px" Width="300px" Font-Bold="True" Font-Italic="True" StaticDisplayLevels="3" BorderColor="White" BorderStyle="Solid" BorderWidth="0px" >
+                    <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#FFFBD6" />
+                    <DynamicSelectedStyle BackColor="#003300" BorderColor="#003300" BorderWidth="2px" ForeColor="White" />
+    <Items>
+        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="AdminHome.aspx"></asp:MenuItem>
+        <asp:MenuItem Text="Categories Master" Value="Categories Master" NavigateUrl="Cate_master.aspx">
+            <asp:MenuItem Text="Add New Category" Value="Add New Category" NavigateUrl="Manage_Cate.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="View Sub_Categories" Value="View Sub_Categories" NavigateUrl="Sub_Cate_master.aspx">
+                <asp:MenuItem Text="Add New Sub_Category" Value="Add New Sub_Category" NavigateUrl="Manage_Sub_Cate.aspx"></asp:MenuItem>
+            </asp:MenuItem>
+        </asp:MenuItem>
+        <asp:MenuItem Text="Product Master" Value="Product Master" NavigateUrl="Pro_master.aspx">
+            <asp:MenuItem Text="Add New Product" Value="Add New Product" NavigateUrl="Manage_Pro.aspx"></asp:MenuItem>
+        </asp:MenuItem>
+        <asp:MenuItem NavigateUrl="~/Admin/Order_Master.aspx" Text="Order Master" Value="Order Master"></asp:MenuItem>
+    </Items>
+                    <StaticHoverStyle BackColor="White" ForeColor="#003300" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="White" BorderColor="White" BorderWidth="10px" ForeColor="#013220" Font-Bold="True" Font-Names="Segoe UI Black" Font-Size="Larger" />
+                    <StaticMenuStyle HorizontalPadding="15px" VerticalPadding="100px" BackColor="#013220" />
+                    <StaticSelectedStyle BackColor="White" ForeColor="#003300" />
+        </asp:menu>
+
+                </td><td style="width:75%; background-color:#F5F5F5;">
+                    <div style="margin-top:30px; margin-left:30px; height:650px; width:1000px; overflow : auto;">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td></tr>
+            <tr><td style="height:80px;  font-family:Verdana, Geneva, Tahoma, sans-serif; color:#FFFFFF; font-weight: 800; text-align: center; background-color: #013220;" colspan="2">Footer</td></tr>
+
+        </table>
+    </div>
+    </form>
+</body>
+</html>
