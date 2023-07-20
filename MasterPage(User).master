@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage(User).master.cs" Inherits="MasterPage_User_" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+    <div>
+        <table border="0" style="height:100%; width:100%; ">
+            <tr style="height:100px; background-color:#013220"><td>
+                <asp:Label ID="LabelLogo" runat="server" Font-Bold="True" Font-Names="Broadway" Font-Size="30px" ForeColor="White" Text="GreatFee" style="height:100px"></asp:Label>
+                <asp:Image ID="ImageLogo" runat="server" Height="40px" ImageUrl="~/l2.png" Width="30px" />
+                
+                <asp:ImageButton ID="btnLogin" runat="server" style="float:right" OnClick="btnLogin_Click"></asp:ImageButton><br />
+                <asp:Label ID="lblLogin" runat="server" style="float:right; font-weight:600; font-family:Verdana;" ForeColor="White"></asp:Label>
+                
+                </td></tr>
+            <tr style="height:50px; background-color:#dcdcdc"><td >
+                <div style="float:left;">
+                <asp:Menu ID="Menu1" runat="server" Font-Names="Verdana" ForeColor="#013220" Orientation="Horizontal" StaticSubMenuIndent="16px" style="margin-left:760px;" Font-Bold="True">
+                    <DynamicMenuItemStyle BackColor="#013220" BorderColor="#013220" BorderWidth="5px" ForeColor="White" />
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/CustHome.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Categories" Value="Categories" NavigateUrl="~/AllCategories.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Products" Value="Products" NavigateUrl="~/AllProducts.aspx">
+                            <asp:MenuItem NavigateUrl="~/FilterByCat.aspx" Text="Filter By Categories" Value="Filter By Categories"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/FilterByBrand.aspx" Text="Filter By Brands" Value="Filter By Brands"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/FilterByConsumer.aspx" Text="Filter By Consumers" Value="Filter By Consumers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/SortByPrice.aspx" Text="Sort By Price" Value="Sort By Price"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="About" Value="About" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Order.aspx" Text="MyOrder" Value="MyOrder"></asp:MenuItem>
+                    </Items>
+                    <StaticMenuItemStyle BorderColor="Gainsboro" BorderWidth="10px" />
+                </asp:Menu>
+                    </div>
+                <div style="float:right">
+                <asp:Button ID="Button1" runat="server" PostBackUrl="~/Cart.aspx" Text="" Height="50px" Width="60px" style="background-image:url(cartIcon.png); background-size:60px 60px; border:none; border-radius:20px; background-color:transparent"/>
+               </div> </td></tr>
+            <tr><td><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder></td></tr>
+            <tr style="height:300px; background-color:#013220"><td>
+
+             <table>
+                 <tr>
+                     <td><p style="color:white; font-family:Verdana; font-weight:700; font-size:18px; margin-left:120px;">Contact Us</p><br />
+                         
+                         <asp:TextBox ID="tbComment" runat="server" TextMode="MultiLine" style="resize:none; height: 100px; width: 300px; margin-left:20px" cols="20" rows="1"></asp:TextBox><br /><br />
+                              <asp:Button ID="btnContact" runat="server" Text="Submit" OnClick="btnContact_Click" style="color:#013220; background-color:white; border:none; font-family:Verdana; font-weight:700; margin-left:130px;" Height="20px" Width="70px"></asp:Button>
+                         </td>
+                     <td><p style="color:white; font-family:Verdana; font-weight:700; font-size:18px; margin-left:200px;">Quick Links</p><br />
+                         <asp:Menu ID="Menu2" runat="server" Font-Names="Verdana" ForeColor="#013220" Orientation="Vertical" StaticSubMenuIndent="16px" style="margin-left:220px;" Font-Bold="True">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/CustHome.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Categories" Value="Categories" NavigateUrl="~/AllCategories.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Products" Value="Products" NavigateUrl="~/AllProducts.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="About" Value="About" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Admin" Value="Admin" NavigateUrl="~/AdminLogin.aspx"></asp:MenuItem>
+                    </Items>
+                             <StaticMenuItemStyle BorderColor="#013220" BorderWidth="5px" ForeColor="White" />
+                </asp:Menu>
+                     </td>
+                     <td><p style="color:white; font-family:Verdana; font-weight:700; font-size:18px; margin-left:220px;">Address</p><br />
+                         <pre style="color:white; font-family:Verdana; font-size:14px; font-weight:600; margin-left:200px"> Rameshwarnagar,
+ Jamnagar, 361008,
+ India.
+
+ Email Id : greatfeel@gmail.com
+
+ Contact No. : 456-456-4512</pre>
+                     </td>
+                 </tr>
+             </table>
+
+        </td></tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>

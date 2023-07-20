@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>Slider/b1.jpg</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Slider/b2.jpg</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Slider/b3.jpg</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Slider/b4.jpg</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Slider/b6.jpg</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Slider/b7.jpg</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Slider/b9.jpg</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Slider/b10.jpg</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Slider/b12.jpg</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Slider/b13.jpg</ImageUrl>
+  </Ad>
+</Advertisements>
